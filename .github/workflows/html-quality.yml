@@ -1,0 +1,29 @@
+name: Responsive web design checks
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-html:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+      - name: Validate HTML exercises
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -t files < <(find HTML -type f -name '*.html' -print)
+          if [ "${#files[@]}" -eq 0 ]; then
+            echo 'No HTML exercises found.'
+            exit 1
+          fi
+          npx --yes html-validate "${files[@]}"
+      - name: Check repository whitespace
+        run: git diff --check
