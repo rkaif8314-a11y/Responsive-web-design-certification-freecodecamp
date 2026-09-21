@@ -1,0 +1,37 @@
+name: HTML exercise checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Parse all HTML documents
+        run: |
+          python - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+
+          class Parser(HTMLParser):
+              def error(self, message):
+                  raise ValueError(message)
+
+          files = sorted(Path('.').rglob('*.html'))
+          if not files:
+              raise SystemExit('No HTML files found.')
+          for path in files:
+              if '.git' in path.parts:
+                  continue
+              Parser(convert_charrefs=True).feed(path.read_text(encoding='utf-8'))
+              print(f'Validated {path}')
+          PY
+      - name: Check whitespace
+        run: git diff --check
