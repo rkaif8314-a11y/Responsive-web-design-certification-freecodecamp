@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Checkout Page</title>
+  </head>
+
+  <body>
+    <h1>Checkout</h1>
+
+    <!-- Section 1: Product currently in the shopping cart. -->
+    <section>
+      <h2>Your Cart</h2>
+
+      <img
+        src="https://cdn.freecodecamp.org/curriculum/labs/cube.jpg"
+        alt="Image of puzzle"
+      />
+
+      <p>Puzzle</p>
+      <p>22.99$</p>
+    </section>
+
+    <!-- Section 2: Payment information and checkout form. -->
+    <section>
+      <h2>Payment Information</h2>
+
+      <form>
+        <!-- Cardholder name is required. -->
+        <label for="card-name">
+          Cardholder Name
+          <span aria-hidden="true">*</span>
+        </label>
+        <input
+          type="text"
+          id="card-name"
+          name="card-name"
+          required
+        />
+
+        <!-- Card number is required and has associated help text. -->
+        <label for="card-number">
+          Card Number
+          <span aria-hidden="true">*</span>
+        </label>
+        <input
+          type="text"
+          id="card-number"
+          name="card-number"
+          aria-describedby="card-number-help"
+          required
+        />
+
+        <p id="card-number-help">
+          Please enter your 16-digit card number without spaces or dashes.
+        </p>
+
+        <!-- Expiry date is required. -->
+        <label for="expiry-date">
+          Expiry Date
+          <span aria-hidden="true">*</span>
+        </label>
+        <input
+          type="text"
+          id="expiry-date"
+          name="expiry-date"
+          placeholder="MM/YY"
+          required
+        />
+
+        <!-- CVV is required. -->
+        <label for="cvv">
+          CVV
+          <span aria-hidden="true">*</span>
+        </label>
+        <input
+          type="text"
+          id="cvv"
+          name="cvv"
+          required
+        />
+
+        <button type="submit">Place Order</button>
+      </form>
+    </section>
+  </body>
+</html>
