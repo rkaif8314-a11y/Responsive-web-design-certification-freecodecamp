@@ -1,0 +1,215 @@
+/* =================================
+   1. PAGE / BODY
+   ================================= */
+
+body {
+  /* Sets the page font */
+  font-family: Arial, sans-serif;
+
+  /* Adds space around the page content */
+  padding: 40px;
+
+  /* Centers the page text */
+  text-align: center;
+
+  /* Sets the page background */
+  background-color: brown;
+}
+
+
+/* =================================
+   2. GREETING CARD
+   ================================= */
+
+.card {
+  /* Card background */
+  background-color: white;
+
+  /* Prevents the card from becoming too wide */
+  max-width: 400px;
+
+  /* Space inside the card */
+  padding: 40px;
+
+  /* Centers the card horizontally */
+  margin: 0 auto;
+
+  /* Rounds the card corners */
+  border-radius: 10px;
+
+  /* Adds a shadow around the card */
+  box-shadow: 0 4px 8px gray;
+
+  /* Smoothly animates transform and background changes */
+  transition: transform 0.3s, background-color 0.3s ease;
+}
+
+
+/* =================================
+   3. CARD HOVER
+   ================================= */
+
+.card:hover {
+  /* Changes card color when the mouse is over it */
+  background-color: khaki;
+
+  /* Slightly enlarges the card */
+  transform: scale(1.1);
+}
+
+
+/* =================================
+   4. PSEUDO-ELEMENTS
+   ================================= */
+
+/* ::before inserts content before the h1 text */
+h1::before {
+  content: "🥳 ";
+}
+
+/* ::after inserts content after the h1 text */
+h1::after {
+  content: " 🥳";
+}
+
+
+/* =================================
+   5. MESSAGE
+   ================================= */
+
+.message {
+  /* Makes the message slightly larger */
+  font-size: 1.2em;
+
+  /* Adds space below the message */
+  margin-bottom: 20px;
+}
+
+
+/* =================================
+   6. CARD LINKS CONTAINER
+   ================================= */
+
+.card-links {
+  /* Adds space above the links */
+  margin-top: 20px;
+
+  /* Places the links in a flexible row */
+  display: flex;
+
+  /* Distributes space around the links */
+  justify-content: space-around;
+}
+
+
+/* =================================
+   7. CARD LINKS
+   ================================= */
+
+.card-links a {
+  /* Removes the default underline */
+  text-decoration: none;
+
+  /* Sets link text size */
+  font-size: 1em;
+
+  /* Adds space inside each link */
+  padding: 10px 20px;
+
+  /* Rounds link corners */
+  border-radius: 5px;
+
+  /* Makes link text white */
+  color: white;
+
+  /* Gives the links a button-like background */
+  background-color: midnightblue;
+
+  /* Smoothly animates background-color changes */
+  transition: background-color 0.3s ease;
+}
+
+
+/* =================================
+   8. LINK HOVER
+   ================================= */
+
+.card-links a:hover {
+  /* Changes link background on hover */
+  background-color: orangered;
+}
+
+
+/* =================================
+   9. LINK ACTIVE
+   ================================= */
+
+.card-links a:active {
+  /* Color while the link is being clicked */
+  background-color: midnightblue;
+}
+
+
+/* =================================
+   10. LINK FOCUS
+   ================================= */
+
+.card-links a:focus {
+  /* Visible keyboard/focus indicator */
+  outline: 2px solid yellow;
+}
+
+
+/* =================================
+   11. LINK VISITED
+   ================================= */
+
+.card-links a:visited {
+  /* Changes text color after visiting the link */
+  color: crimson;
+}
+
+
+/* =================================
+   12. TARGET SECTIONS
+   ================================= */
+
+section {
+  /* Adds space around each section */
+  margin: 20px auto;
+
+  /* Limits section width */
+  max-width: 600px;
+
+  /* Section background */
+  background-color: whitesmoke;
+
+  /* Space inside the section */
+  padding: 20px;
+
+  /* Rounded section corners */
+  border-radius: 10px;
+
+  /* Hides sections until their link target is selected */
+  display: none;
+}
+
+
+/* =================================
+   13. SECTION HOVER
+   ================================= */
+
+section:hover {
+  /* Skews the section slightly on hover */
+  transform: skewX(10deg);
+}
+
+
+/* =================================
+   14. :target
+   ================================= */
+
+/* Shows the section whose id matches the URL fragment */
+section:target {
+  display: block;
+}
