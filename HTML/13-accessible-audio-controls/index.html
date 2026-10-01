@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Accessible Controls</title>
+  </head>
+  <body>
+    <!-- Main heading for the audio control group. -->
+    <h1>Audio Controls</h1>
+
+    <!-- Button that represents the play control. -->
+    <button type="button">Play</button>
+
+    <div>
+      <!-- Visible label and description for the volume control. -->
+      <span id="volume-label">Volume</span>
+      <span id="volume-description">Adjust the sound level</span>
+
+      <!-- Connects the range control to both accessible text elements. -->
+      <input
+        type="range"
+        min="0"
+        max="100"
+        value="50"
+        aria-labelledby="volume-label volume-description"
+      />
+    </div>
+
+    <!-- Button that represents the mute control. -->
+    <button type="button">Mute</button>
+  </body>
+</html>
