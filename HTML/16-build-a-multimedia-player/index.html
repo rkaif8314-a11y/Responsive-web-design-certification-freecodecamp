@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multimedia Player</title>
+  </head>
+
+  <body>
+    <main>
+      <h1>Multimedia Player</h1>
+
+      <!-- Audio player. -->
+      <section>
+        <h2>Music</h2>
+        <audio controls aria-label="Music player">
+          <source
+            src="https://cdn.freecodecamp.org/curriculum/js-music-player/sailing-away.mp3"
+            type="audio/mpeg"
+          />
+          Your browser does not support the audio element.
+        </audio>
+      </section>
+
+      <!-- Video player with captions. -->
+      <section>
+        <h2>What is a map method and how does it work?</h2>
+
+        <video controls width="300" aria-label="Map method video">
+          <source
+            src="https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.mp4"
+            type="video/mp4"
+          />
+          <track
+            src="https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.vtt"
+            kind="subtitles"
+            srclang="en"
+            label="English subtitles"
+          />
+          Your browser does not support the video element.
+        </video>
+      </section>
+
+      <!-- Transcript for the video. -->
+      <section>
+        <h2>Transcript</h2>
+        <p>This is a video in MP4 format.</p>
+      </section>
+    </main>
+  </body>
+</html>
