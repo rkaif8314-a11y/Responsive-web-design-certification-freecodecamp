@@ -1,0 +1,150 @@
+/* ================================
+   1. PAGE / BODY STYLING
+   ================================ */
+
+body {
+  /* background-color: sets the page background */
+  background-color: #f4f1ea;
+
+  /* font-family chooses the text font */
+  font-family: Arial, sans-serif;
+
+  /* color sets the default text color */
+  color: #222;
+
+  /* max-width prevents the content from becoming too wide */
+  max-width: 600px;
+
+  /* auto left/right margins center the content */
+  margin: 60px auto;
+
+  /* padding adds space inside the body */
+  padding: 20px;
+}
+
+
+/* ================================
+   2. MAIN HEADING
+   ================================ */
+
+h1 {
+  /* text-align centers the heading */
+  text-align: center;
+
+  /* adds space below the heading */
+  margin-bottom: 30px;
+}
+
+
+/* ================================
+   3. MAIN TODO LIST
+   ================================ */
+
+.todo-list {
+  /* removes default inner spacing */
+  padding: 0;
+
+  /* removes default list bullets */
+  list-style-type: none;
+}
+
+
+/* ================================
+   4. DIRECT TODO ITEMS
+   ================================ */
+
+.todo-list > li {
+  /* > means direct child */
+  background-color: white;
+
+  /* separates each todo item */
+  margin-bottom: 20px;
+
+  /* adds space inside each item */
+  padding: 20px;
+
+  /* rounds the corners */
+  border-radius: 8px;
+}
+
+
+/* ================================
+   5. CHECKBOX
+   ================================ */
+
+/* [type="checkbox"] is an attribute selector */
+input[type="checkbox"] {
+  /* creates space between checkbox and label */
+  margin-right: 8px;
+}
+
+
+/* ================================
+   6. TODO LABEL
+   ================================ */
+
+label {
+  /* makes the todo text bold */
+  font-weight: bold;
+}
+
+
+/* ================================
+   7. SUB-ITEM LIST
+   ================================ */
+
+.sub-item {
+  /* creates space above the resource link */
+  margin-top: 10px;
+
+  /* moves the nested list inward */
+  padding-left: 25px;
+}
+
+
+/* ================================
+   8. ALL LINKS
+   ================================ */
+
+a {
+  /* removes the default link underline */
+  text-decoration: none;
+}
+
+
+/* ================================
+   9. LINK STATES / PSEUDO-CLASSES
+   ================================ */
+
+/* :link = unvisited link */
+.sub-item-link:link {
+  color: #2563eb;
+}
+
+
+/* :visited = link that has already been visited */
+.sub-item-link:visited {
+  color: #7c3aed;
+}
+
+
+/* :hover = mouse pointer is over the link */
+.sub-item-link:hover {
+  color: red;
+}
+
+
+/* :focus = link currently has keyboard/focus attention */
+.sub-item-link:focus {
+  /* outline creates a visible focus indicator */
+  outline: 2px solid #16a34a;
+
+  /* moves the outline away from the link */
+  outline-offset: 3px;
+}
+
+
+/* :active = while the link is being clicked */
+.sub-item-link:active {
+  color: #dc2626;
+}
