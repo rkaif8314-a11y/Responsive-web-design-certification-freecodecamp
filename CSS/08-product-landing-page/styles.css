@@ -1,0 +1,329 @@
+/* NEW PROPERTY: box-sizing makes width/height include padding and border */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* NEW PROPERTY: position: fixed keeps the navbar at the top of the viewport */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background-color: white;
+  z-index: 10;
+}
+
+#header-img {
+  width: 120px;
+  height: auto;
+}
+
+/* FLEXBOX: arranges navigation links in a row */
+#nav-bar {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-link {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* NEW PSEUDO-CLASS: :hover styles an element when the pointer is over it */
+.nav-link:hover {
+  color: orange;
+}
+
+#hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 100px 20px 40px;
+}
+
+.eyebrow {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+  color: orange;
+}
+
+#hero h1 {
+  font-size: 48px;
+  margin: 10px 0;
+  max-width: 700px;
+}
+
+.hero-text {
+  font-size: 18px;
+  max-width: 550px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+#form {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+#email {
+  width: 280px;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid gray;
+}
+
+#submit {
+  padding: 12px 22px;
+  border: none;
+  background-color: orange;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#submit:hover {
+  background-color: black;
+  color: white;
+}
+
+#features {
+  padding: 100px 30px;
+  text-align: center;
+  background-color: lightgray;
+}
+
+#features h2 {
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+/* FLEXBOX: places feature cards side by side */
+.features-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  flex: 1;
+  padding: 30px;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.feature-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.feature-card h3 {
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+.feature-card p {
+  line-height: 1.6;
+  color: gray;
+}
+
+/* =========================
+   DEMO SECTION
+   ========================= */
+
+#demo {
+  padding: 100px 30px;
+  text-align: center;
+  background-color: white;
+}
+
+#demo h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+#demo p {
+  color: gray;
+  margin-bottom: 40px;
+}
+
+#video {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 10px;
+}
+
+#pricing {
+  padding: 100px 30px;
+  text-align: center;
+  background-color: lightgray;
+}
+
+#pricing h2 {
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+/* FLEXBOX: arranges pricing cards horizontally */
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.pricing-card {
+  flex: 1;
+  padding: 35px 25px;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 10px;
+  max-width: 300px;
+}
+
+/* COMPOUND SELECTOR: targets elements with both classes */
+.pricing-card.featured {
+  border: 2px solid orange;
+}
+
+.pricing-card h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+/* DIRECT CHILD + :not(): targets direct paragraph children except .price */
+.pricing-card > p:not(.price) {
+  color: gray;
+  line-height: 1.5;
+}
+
+.pricing-card ul {
+  padding: 0;
+  margin: 25px 0;
+  list-style-type: none;
+}
+
+.pricing-card li {
+  margin-bottom: 12px;
+}
+
+.pricing-card button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.pricing-card button:hover {
+  background-color: orange;
+  color: black;
+}
+
+footer {
+  padding: 30px;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* NEW CSS FEATURE: media query makes the layout responsive */
+@media (max-width: 700px) {
+  #header {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px 20px;
+  }
+
+  #nav-bar {
+    gap: 18px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+
+  #hero {
+    padding-top: 150px;
+  }
+
+  #hero h1 {
+    font-size: 36px;
+  }
+
+  .hero-text {
+    font-size: 16px;
+  }
+
+  #form {
+    flex-direction: column;
+    width: 100%;
+    max-width: 350px;
+  }
+
+  #email,
+  #submit {
+    width: 100%;
+  }
+
+  /* NEW FLEXBOX VALUE: column stacks feature cards vertically */
+  .features-container {
+    flex-direction: column;
+  }
+
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  #video {
+    height: 250px;
+  }
+
+  #features,
+  #demo,
+  #pricing {
+    padding: 70px 20px;
+  }
+}

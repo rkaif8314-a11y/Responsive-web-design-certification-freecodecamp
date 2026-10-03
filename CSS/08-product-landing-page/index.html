@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Landing Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- NEW TAG: header = introductory/header area of the page -->
+  <header id="header">
+    <!-- NEW TAG: img = displays an image -->
+    <img
+      id="header-img"
+      src="https://placehold.co/120x40?text=NOVA+X1"
+      alt="NOVA X1 logo"
+    >
+
+    <!-- NEW TAG: nav = navigation area -->
+    <nav id="nav-bar">
+      <a class="nav-link" href="#features">Features</a>
+      <a class="nav-link" href="#demo">Demo</a>
+      <a class="nav-link" href="#pricing">Pricing</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- NEW TAG: main = contains the primary content of the page -->
+    <section id="hero">
+      <p class="eyebrow">NOVA AUDIO • X1 SERIES</p>
+      <h1>Experience Sound Different</h1>
+      <p class="hero-text">
+        Premium wireless audio built for music, gaming and everyday life.
+      </p>
+
+      <!-- NEW TAG: form = collects and submits user input -->
+      <form id="form" action="https://www.freecodecamp.org/email-submit">
+        <!-- NEW INPUT: type=email provides email-format validation -->
+        <input
+          id="email"
+          type="email"
+          name="email"
+          placeholder="Enter your email address"
+        >
+        <!-- NEW INPUT: type=submit creates a form submission button -->
+        <input id="submit" type="submit" value="GET STARTED">
+      </form>
+    </section>
+
+    <section id="features">
+      <h2>Why NOVA X1?</h2>
+
+      <div class="features-container">
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Fast Charge</h3>
+          <p>Get hours of playback from just a few minutes of charging.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🔊</div>
+          <h3>Spatial Audio</h3>
+          <p>Experience immersive sound that makes every track feel closer.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🔋</div>
+          <h3>40H Battery</h3>
+          <p>Enjoy long-lasting playback without constantly reaching for a charger.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW TAG: iframe embeds external media/content -->
+    <section id="demo">
+      <h2>See NOVA X1 in Action</h2>
+      <p>Discover the technology and design behind the NOVA X1.</p>
+
+      <iframe
+        id="video"
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        title="NOVA X1 product demonstration"
+        allowfullscreen
+      ></iframe>
+    </section>
+
+    <section id="pricing">
+      <h2>Choose Your NOVA X1</h2>
+
+      <!-- FLEXBOX CONTAINER: holds pricing cards in a responsive layout -->
+      <div class="pricing-container">
+        <div class="pricing-card">
+          <h3>CORE</h3>
+          <p class="price">$99</p>
+          <p>Perfect for everyday listening.</p>
+          <ul>
+            <li>20H Battery</li>
+            <li>Fast Charging</li>
+            <li>Wireless Audio</li>
+          </ul>
+          <button>Choose CORE</button>
+        </div>
+
+        <div class="pricing-card featured">
+          <h3>PRO</h3>
+          <p class="price">$149</p>
+          <p>Built for music lovers.</p>
+          <ul>
+            <li>40H Battery</li>
+            <li>Spatial Audio</li>
+            <li>Fast Charging</li>
+          </ul>
+          <button>Choose PRO</button>
+        </div>
+
+        <div class="pricing-card">
+          <h3>ULTRA</h3>
+          <p class="price">$199</p>
+          <p>The ultimate NOVA experience.</p>
+          <ul>
+            <li>50H Battery</li>
+            <li>Advanced Spatial Audio</li>
+            <li>Premium Build</li>
+          </ul>
+          <button>Choose ULTRA</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- NEW TAG: footer = bottom information area of the webpage -->
+  <footer>
+    <p>© 2026 NOVA X1. Built for better sound.</p>
+  </footer>
+</body>
+
+</html>
