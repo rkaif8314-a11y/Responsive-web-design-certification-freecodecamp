@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: black;
+  background-color: white;
+}
+
+/* NEW PROPERTY: position: fixed keeps the navbar in place while scrolling. */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  border-right: 1px solid gray;
+  overflow-y: auto;
+  background-color: white;
+}
+
+/* NEW: descendant selector (#navbar header) targets header inside navbar. */
+#navbar header {
+  font-size: 24px;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 1px solid gray;
+}
+
+.nav-link {
+  display: block;
+  padding: 15px 20px;
+  border-top: 1px solid gray;
+  color: black;
+  text-decoration: none;
+}
+
+/* NEW PSEUDO-CLASS: :hover applies styles when the mouse is over a link. */
+.nav-link:hover {
+  background-color: lightgray;
+}
+
+/* NEW PROPERTY: margin-left creates space for the fixed navbar. */
+#main-doc {
+  margin-left: 250px;
+  padding: 30px;
+  max-width: 900px;
+}
+
+/* NEW SELECTOR: .main-section targets every documentation section. */
+.main-section {
+  margin-bottom: 50px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid gray;
+}
+
+/* NEW: descendant selector targets headers inside sections. */
+.main-section header {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.main-section p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* NEW TAG STYLE: code is displayed as a separate block. */
+.main-section code {
+  display: block;
+  padding: 15px;
+  margin: 15px 0;
+  background-color: lightgray;
+  border-radius: 5px;
+  border-left: 4px solid gray;
+  font-family: monospace;
+}
+
+/* NEW: media query makes the layout responsive on smaller screens. */
+@media (max-width: 768px) {
+  #navbar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid gray;
+  }
+
+  #main-doc {
+    margin-left: 0;
+    padding: 25px;
+  }
+}

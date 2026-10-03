@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web development Documentation</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- NEW TAG: nav = navigation section -->
+    <nav id="navbar">
+      <!-- NEW TAG: header = introductory heading for the navigation -->
+      <header>Web Development</header>
+
+      <!-- NEW: anchor links with #id jump to matching sections -->
+      <a class="nav-link" href="#Introduction">Introduction</a>
+      <a class="nav-link" href="#HTML_Basics">HTML Basics</a>
+      <a class="nav-link" href="#CSS_Basics">CSS Basics</a>
+      <a class="nav-link" href="#JavaScript_Basics">Javascript Basics</a>
+      <a class="nav-link" href="#Responsive_Design">Responsive Design</a>
+      <a class="nav-link" href="#Best_Practices">Best Practices</a>
+    </nav>
+
+    <!-- NEW TAG: main = main content of the page -->
+    <main id="main-doc">
+      <!-- NEW TAG: section = groups related documentation content -->
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <p>Web development is the process of creating websites and web applications.</p>
+        <p>It combines technologies such as HTML, CSS, and JavaScript to create interactive experiences on the web.</p>
+        <p>The three basic technologies used on the frontend are:</p>
+
+        <!-- NEW TAG: ul = unordered list -->
+        <ul>
+          <!-- NEW TAG: li = list item -->
+          <li>HTML for structure</li>
+          <li>CSS for presentation</li>
+          <li>JavaScript for behavior</li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="HTML_Basics">
+        <header>HTML Basics</header>
+        <p>HTML provides the structure and meaning of content on a webpage.</p>
+        <p>Elements such as headings, paragraphs, links, and images are written using HTML.</p>
+        <p>A basic HTML heading can be written using:</p>
+
+        <!-- NEW TAG: code = represents a piece of computer code -->
+        <code>&lt;h1&gt;Hello World&lt;/h1&gt;</code>
+      </section>
+
+      <section class="main-section" id="CSS_Basics">
+        <header>CSS Basics</header>
+        <p>CSS is used to control the appearance and layout of HTML elements.</p>
+        <p>With CSS, you can change colors, spacing, fonts, borders, and positioning.</p>
+        <p>A CSS rule can be written like this:</p>
+
+        <code>p { color: green; }</code>
+      </section>
+
+      <section class="main-section" id="JavaScript_Basics">
+        <header>JavaScript Basics</header>
+        <p>JavaScript adds behavior and interactivity to webpages.</p>
+        <p>It can respond to user actions and dynamically change webpage content.</p>
+        <p>You can display a message in the browser console using:</p>
+
+        <code>console.log("Hello World");</code>
+      </section>
+
+      <section class="main-section" id="Responsive_Design">
+        <header>Responsive Design</header>
+        <p>Responsive design allows a webpage to work well on different screen sizes.</p>
+        <p>CSS media queries can change the layout depending on the device width.</p>
+        <p>A media query can begin like this:</p>
+
+        <code>@media (max-width: 768px) { }</code>
+      </section>
+
+      <section class="main-section" id="Best_Practices">
+        <header>Best Practices</header>
+        <p>Good web development practices make websites easier to maintain and use.</p>
+        <p>Clean HTML, organized CSS, meaningful names, and accessible interfaces are important parts of a good project.</p>
+        <p>Connecting a stylesheet to HTML is commonly done using:</p>
+        <p>Some useful habits include:</p>
+
+        <ul>
+          <li>Use meaningful HTML elements</li>
+          <li>Keep CSS organized</li>
+          <li>Use clear class names</li>
+          <li>Test the page on different screen sizes</li>
+        </ul>
+
+        <code>&lt;link rel="stylesheet" href="styles.css"&gt;</code>
+      </section>
+    </main>
+  </body>
+</html>
